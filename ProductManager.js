@@ -36,9 +36,17 @@ class ProductManager {
       console.log("no hay")
     }
   }
+  deleteProductByID = (id) =>{
+    const borrar = this.products.filter(product => product.id !== id)
+    return borrar
+  }
+  updateProduct = (id) =>{
+    const res = this.products.find(item => item.id === id);
+    res.defineProperty(res)
+  }
 }
 const añadir = new ProductManager()
 añadir.addProduct("pan","harina",1,"link",1)
 añadir.addProduct("pollo","carne",100,"links",2)
 
-console.log(añadir.getProduct())
+console.log(añadir.updateProduct(1))
